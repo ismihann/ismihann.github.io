@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nyx Nexus — Yapay zekâ, robotik, fizik, uzay ve kuantum üzerine araştırmalar, fikirler ve projeler.">
+  <meta name="theme-color" content="#080d1a">
+  <title>Nyx Nexus | Connecting Intelligence to the Unknown</title>
+
+  <style>
+    :root {
+      --bg: #080d1a;
+      --panel: #101a2d;
+      --text: #edf2ff;
+      --muted: #a1aec7;
+      --blue: #8db8ff;
+      --line: #24324b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 13, 26, 0.94);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 490px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 90px 0;
+      background:
+        radial-gradient(ellipse at 80% 30%,
+          rgba(57, 98, 173, 0.22), transparent 48%),
+        radial-gradient(ellipse at 15% 90%,
+          rgba(70, 54, 137, 0.15), transparent 45%);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.8rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .hero p {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 11px 20px;
+      border: 1px solid #729de6;
+      border-radius: 5px;
+      color: var(--text);
+      transition: background 0.2s;
+      width: fit-content;
+    }
+
+    .button:hover {
+      background: #1b2d4b;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 30px;
+      max-width: 650px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #111c30, #0c1322);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #6286c2;
+    }
+
+    .card .symbol {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .about {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #0b1221;
+    }
+
+    .about p {
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .note {
+      border-left: 2px solid var(--blue);
+      padding: 12px 18px;
+      margin-top: 22px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#">NYX <span>NEXUS</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#fields">Alanlar</a>
+        <a href="#about">Hakkımda</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Science · Technology · Discovery</div>
+
+        <h1>NYX <span>NEXUS</span></h1>
+
+        <p>
+          Connecting Intelligence to the Unknown.
+          Yapay zekâdan uzayın derinliklerine uzanan fikirler,
+          araştırmalar ve projeler için kişisel bilim günlüğüm.
+        </p>
+
+        <a class="button" href="#fields">Keşfetmeye başla ↘</a>
+      </div>
+    </section>
+
+    <section id="fields">
+      <div class="container">
+        <h2 class="section-title">Keşif Alanları</h2>
+        <p class="section-intro">
+          Farklı disiplinlerin kesiştiği noktaları araştırıyorum.
+          Öğrendiklerim, okuduğum çalışmalar ve geliştirdiğim projeler.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="symbol">⌘</div>
+            <h3>Yapay Zekâ</h3>
+            <p>Makine öğrenmesi, derin öğrenme, AI ajanları ve veri mühendisliği.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">⚙</div>
+            <h3>Robotik</h3>
+            <p>Otonom sistemler, sensör füzyonu, bilgisayarlı görü ve kontrol.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">◉</div>
+            <h3>Fizik</h3>
+            <p>Evrenin temel yasaları, bilimsel teoriler ve fiziksel sistemler.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">✧</div>
+            <h3>Uzay</h3>
+            <p>Uzay teknolojileri, roketler, keşif görevleri ve otonom uzay araçları.</p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">⟡</div>
+            <h3>Kuantum</h3>
+            <p>Kuantum hesaplama, kuantum algoritmaları ve yeni nesil teknolojiler.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">Bu Bir Keşif Günlüğü</h2>
+        <p>
+          Nyx Nexus; araştırma makalelerinden çıkardığım notları,
+          öğrendiğim teknikleri, geliştirdiğim projeleri ve merak ettiğim
+          bilimsel soruları paylaştığım kişisel alanım.
+          Amacım yalnızca bilgi toplamak değil, fikirler arasında bağlantılar kurmak.
+        </p>
+
+        <div class="note">
+          Her yeni soru, bilinmeyene açılan başka bir kapıdır.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Nyx Nexus</span>
+      <span>Connecting Intelligence to the Unknown.</span>
+    </div>
+  </footer>
+</body>
+</html>
